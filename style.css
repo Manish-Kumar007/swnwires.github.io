@@ -33,6 +33,15 @@ img {
 	object-fit: cover;
 }
 
+table{
+	display: table;
+	border-collapse: separate;
+	border-spacing: 2px;
+	box-sizing: border-box;
+	border-color: grey;
+	font-size: 1.5rem;
+}
+
 
 p {
 	color: black;
@@ -43,7 +52,7 @@ p {
 	letter-spacing: .05rem;
 }
 .section-title {
-	font-size: 4rem;
+	font-size: 6rem;
 	font-weight: 300;
 	color: black;
 	margin-bottom: 10px;
@@ -76,7 +85,10 @@ p {
 	font-size: 3rem;
 	text-transform: uppercase;
 	color: white;
+	text-align: center;
+	
 }
+
 .brand h1 span {
 	color: crimson;
 }
@@ -284,7 +296,7 @@ p {
 }
 #services .service-top {
 	max-width: 500px;
-	margin: 0 auto;
+	margin: 0 50px;
 }
 .service-top ul{
 	color: black;
@@ -337,16 +349,19 @@ p {
 	height: 80px;
 	width: 80px;
 	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
 }
 #services .service-item h2 {
 	font-size: 2rem;
 	color: white;
 	margin-bottom: 10px;
 	text-transform: uppercase;
+	align-self: center;
 }
 #services .service-item p {
 	color: white;
-	text-align: left;
+	text-align: center;
 }
 /* End Services Section */
 
@@ -379,7 +394,8 @@ p {
 #projects .project-info {
 	padding: 30px;
 	flex-basis: 50%;
-	height: 100%;
+	height: 500px;
+	width:100%;
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
@@ -388,7 +404,7 @@ p {
 	color: white;
 }
 #projects .project-info h1 {
-	font-size: 4rem;
+	font-size: 3rem;
 	font-weight: 500;
 }
 #projects .project-info h2 {
@@ -421,16 +437,84 @@ p {
 #projects .project-item:hover .project-img img {
 	transform: scale(1.1);
 }
+  
+#projects .card {
+	width: 100%;
+	height: 100%;
+	transition: transform 1s;
+	transform-style: preserve-3d;
+	cursor: pointer;
+	position: relative;
+  }
+
+  #projects .card1{
+	width: 100%;
+	height: 100%;
+	transition: transform 1s;
+	transform-style: preserve-3d;
+	cursor: pointer;
+	position: relative;
+  }
+
+  #projects  .card2{
+	width: 100%;
+	height: 100%;
+	transition: transform 1s;
+	transform-style: preserve-3d;
+	cursor: pointer;
+	position: relative;
+  }
+  
+  
+  #projects .card.is-flipped,
+  #projects .card1.is-flipped,
+  #projects .card2.is-flipped {
+	transform: rotateY(180deg);
+  }
+  
+  #projects .card__face {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	color: white;
+	font-weight: bold;
+	font-size: 40px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+  }
+  
+  #projects .card__face--front {
+	  /* width: 100%; */
+	/* background: red; */
+  }
+  
+  #projects .card__face--back {
+	/* background: blue; */
+	transform: rotateY(180deg);
+  }
+  
 /* End Projects section */
+
+
 
 /* About Section */
 #about .about {
-	flex-direction: column-reverse;
+	flex-direction: column;
 	text-align: center;
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 10px 20px 100px;
+	margin-top: 50px;
 }
+#about .container-main .col-right .section-title{
+	margin-top: 50px;
+}
+
+
 #about .col-left {
 	width: 250px;
 	height: 360px;
@@ -468,6 +552,7 @@ p {
 	width: 98%;
 	border: 7px solid crimson;
 	z-index: -1;
+	
 }
 /* End About Section */
 
@@ -515,40 +600,63 @@ p {
 /*End contact Section */
 
 /* Post requriment */
-#PostReq{
-	background-image: linear-gradient(60deg, #59405c 0%, #485563 100%);
-	min-height: 100vh;
-	width: 100%;
-	margin:50px 0;	
+#PostReq {
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	
+}
+.Post h1{
+	margin-top: 50px;
+	font-size: 3rem;
+	text-transform: uppercase;
+	color: white;
+	text-align: center;
+}
+.Post span{
+	color: crimson;
+}
+#PostReq .PostReq {
+	min-height: 200px;
+	flex-direction: column;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	margin-top: 50px !important;
+	margin-bottom: 50px;
 }
 
-#PostReq .container-main{
-	width:80%;
-	margin:0px auto;
-	padding-top:50px;
-}
+/* #PostReq h2 {
+	color: white;
+	font-weight: 500;
+	font-size: 1.8rem;
+	letter-spacing: .1rem;
+	margin-top: 10px;
+	margin-bottom: 10px;
+} */
 .contact-section h1{
 	text-align: center;
 	color: #ddd;
+	font-size: 3rem;
+	
   }
-  .border{
+  /* .border{
 	width: 100px;
 	height: 10px;
 	background: #34495e;
 	margin: 40px auto;
-  }
+  } */
   
   .contact-form{
-	max-width: 600px;
-	margin: auto;
+	max-width: 1000px;
+	margin:50px auto;
 	padding: 0 10px;
 	overflow: hidden;
+	display: inline-block;
   }
   
   .contact-form-text{
 	display: block;
 	width: 100%;
 	box-sizing: border-box;
+	border-radius: 10px;
 	margin: 16px 0;
 	border: 0;
 	background: #111;
@@ -656,7 +764,18 @@ p {
 /* End Keyframes */
 
 /* Media Query For Tablet */
+
+@media only screen and (max-width: 320px){
+	*{
+		/* display: none; */
+		font-size:1rem;
+	}
+	#about .about{
+		padding-top:50px;
+	}
+}
 @media only screen and (min-width: 768px) {
+	
 	.cta {
 		font-size: 2.5rem;
 		padding: 20px 60px;
@@ -664,6 +783,7 @@ p {
 	h1.section-title {
 		font-size: 6rem;
 	}
+	
 
 	/* Hero */
 	#hero h1 {
@@ -697,11 +817,69 @@ p {
 	#projects .all-projects .project-img {
 		height: 100%;
 	}
+	.card {
+		width: 100%;
+		height: 100%;
+		transition: transform 1s;
+		transform-style: preserve-3d;
+		cursor: pointer;
+		position: relative;
+	  }
+	
+	  .card1{
+		width: 100%;
+		height: 100%;
+		transition: transform 1s;
+		transform-style: preserve-3d;
+		cursor: pointer;
+		position: relative;
+	  }
+	
+	  .card2{
+		width: 100%;
+		height: 100%;
+		transition: transform 1s;
+		transform-style: preserve-3d;
+		cursor: pointer;
+		position: relative;
+	  }
+	  
+	  
+	  .card.is-flipped,
+	  .card1.is-flipped,
+	  .card2.is-flipped {
+		transform: rotateY(180deg);
+	  }
+	  
+	  .card__face {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		color: white;
+		font-weight: bold;
+		font-size: 40px;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+	  }
+	  
+	  .card__face--front {
+		  /* width: 100%; */
+		/* background: red; */
+	  }
+	  
+	  .card__face--back {
+		/* background: blue; */
+		transform: rotateY(180deg);
+	  }
 	/* End Project */
 
 	/* About */
 	#about .about {
-		flex-direction: row-reverse;
+		flex-direction: row;
 		/* padding: 10px 20px 100px; */
 	}
 	#about .col-left {
@@ -759,6 +937,19 @@ p {
 		padding-left: 20px;
 	}
 	/* End contact  */
+	.contact-form-text{
+		display: block;
+		width: 1000px;
+		box-sizing: border-box;
+		border-radius: 10px;
+		margin: 16px 0;
+		border: 0;
+		background: #111;
+		padding: 20px 40px;
+		outline: none;
+		color: #ddd;
+		transition: 0.5s;
+	  }
 }
 /* End Media Query For Tablet */
 
@@ -790,5 +981,24 @@ p {
 		flex-basis: 22%;
 		margin: 1.5%;
 	}
+	table{
+		display: table;
+		border-collapse: separate;
+		border-spacing: 2px;
+		box-sizing: border-box;
+		border-color: grey;
+		font-size: x-large;
+	}
+	#about .about{
+		padding-top:50px;
+	}
+
+	#PostReq .PostReq {
+		margin-top:150px;
+		margin-bottom: 50px;
+	}
+
+	
+	
 }
 /* End  Media Query For Desktop */
