@@ -144,6 +144,7 @@ p {
 	text-transform: uppercase;
 	padding: 20px;
 	display: block;
+	text-align: center;
 }
 #header .nav-list ul a::after {
 	content: attr(data-after);
