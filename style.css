@@ -488,10 +488,7 @@ p {
 	justify-content: center;
   }
   
-  #projects .card__face--front {
-	  /* width: 100%; */
-	/* background: red; */
-  }
+  
   
   #projects .card__face--back {
 	/* background: blue; */
@@ -867,10 +864,6 @@ p {
 		justify-content: center;
 	  }
 	  
-	  .card__face--front {
-		  /* width: 100%; */
-		/* background: red; */
-	  }
 	  
 	  .card__face--back {
 		/* background: blue; */
